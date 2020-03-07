@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="head">
+    <!-- Bootstrap stylesheets and script -->
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+    <link th:href="@{/css/techjobs.css}" rel="stylesheet" />
+    <script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
+
+    <title th:text="${title}"></title>
+</head>
+<body>
+    <nav th:fragment="navbar" class="nav">
+        <a class="nav-link" th:href="@{/}" th:text="Home" th:classappend="${title == 'Home'} ? disabled"></a>
+<!--        <a class="nav-link" th:href="@{/page2}" th:text="Page 2" th:classappend="${title == 'Page 2'} ? disabled"></a>-->
+<!--        <a class="nav-link" th:href="@{/page3}" th:text="Page 3" th:classappend="${title == 'Page 3'} ? disabled"></a>-->
+    </nav>
+    <header th:fragment="header" th:text="${title}"></header>
+
+</body>
+</html>
